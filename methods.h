@@ -13,3 +13,18 @@ std::list<int> lst={1,2,3,4,5,6};
     {
         std::cout << i <<std::endl;
     }
+
+
+//---------------------------------------------------------------------------------------------
+    std::list<int> lst={1,2,3,4,5,6};
+
+    auto g=remove_if(lst.begin(),lst.end(),[](auto && i) {
+       return i<3;
+    });
+
+    lst.erase(g,lst.end());
+
+    for (auto i : lst)
+    {
+        std::cout << i <<std::endl;
+    }
